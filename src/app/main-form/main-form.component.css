@@ -7,3 +7,23 @@
 .title {
     text-align: center;
 }
+
+.main-layout > .btn-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-panel > button {
+    margin: 50px;
+    padding: 50px;
+}
+
+.quote-window{
+    display: flex;
+    justify-content: baseline;
+}
+
+
+.quote-window > button {
+    padding: 50px;
+}
