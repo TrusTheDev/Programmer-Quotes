@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainFormComponent } from "./main-form/main-form.component";
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -11,3 +12,9 @@ import { MainFormComponent } from "./main-form/main-form.component";
 export class AppComponent {
   title = 'Programmer-quotes';
 }
+
+@NgModule({
+  imports: [
+    HttpClientModule,
+  ],
+})
