@@ -12,9 +12,3 @@ import { HttpClientModule } from '@angular/common/http';
 export class AppComponent {
   title = 'Programmer-quotes';
 }
-
-@NgModule({
-  imports: [
-    HttpClientModule,
-  ],
-})
