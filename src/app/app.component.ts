@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainFormComponent } from "./main-form/main-form.component";
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
