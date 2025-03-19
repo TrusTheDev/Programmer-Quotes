@@ -11,13 +11,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './main-form.component.css',
 })
 export class MainFormComponent {
-  quotes: any[] = [];
-
-  constructor(private QuotesService: QuotesService){}
-
-  ngOnInit(){
-    this.QuotesService.getQuotes().subscribe((data)=>{
-      this.quotes = data;
-    });
+  quotes$: Observable<QuotesApi>;
+  
+  
+  constructor(private QuotesService: QuotesService){
+    this.quotes$ = QuotesService.getLastQuote();
   }
+
 }

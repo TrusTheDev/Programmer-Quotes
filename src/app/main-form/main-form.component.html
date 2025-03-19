@@ -7,7 +7,7 @@
 
         <div class="quote-window">
             <button type="button">Like</button>
-            <textarea rows="16" cols="150" placeholder="Que tu mejor objetivo el día de hoy sea ganarle a esa excua!"></textarea>
+            <textarea rows="16" cols="150" *ngIf="quotes$ | async as quote">{{quote.quote}}</textarea>
             <button type="button">Dislike</button>
         </div>
 
@@ -15,10 +15,4 @@
             <button type="button">Next</button>
             <button type="button">Submit</button>
         </div>
-
-        @for (quote of quotes; track quotes) {
-            <p>{{quotes}}</p>
-        }
-        
-    </div>
 </div>
