@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { QuotesService } from '../services/quotes.service';
+import { quotesService } from '../services/quotes.service';
 import { QuotesApi } from '../models/quote';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,11 +11,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './main-form.component.css',
 })
 export class MainFormComponent {
-  quotes$: Observable<QuotesApi>;
+  quotes$: QuotesApi | null = null;
   
-  
-  constructor(private QuotesService: QuotesService){
-    this.quotes$ = QuotesService.getLastQuote();
-  }
+  constructor(private quotesService: quotesService){
 
+    this.quotesService.getLastQuote().subscribe(data => {
+      this.quotes = data; // Guardas la respuesta en la variable
+  });
+  }
 }

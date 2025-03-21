@@ -7,9 +7,10 @@
 
         <div class="quote-window">
             <button type="button">Like</button>
-            <textarea rows="16" cols="150" *ngIf="quotes$ | async as quote">{{quote.quote}}</textarea>
+            <textarea rows="16" cols="150">{{quotes?.quote}}</textarea>
             <button type="button">Dislike</button>
         </div>
+        <p>{{likes}}</p>
 
         <div class="btn-panel">
             <button type="button">Next</button>

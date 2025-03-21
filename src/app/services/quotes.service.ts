@@ -8,7 +8,7 @@ import { QuotesApi } from '../models/quote';
   providedIn: 'root'
 })
 //Acordarse de cambiar la url a la ruta establecida donde suba mi aplicación de spring
-export class QuotesService {
+export class quotesService {
   constructor(private http: HttpClient) { }
 
   getQuotes(): Observable<QuotesApi[]>{
